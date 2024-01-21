@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contatto</title>
+    <link rel="stylesheet" href="../styles/styles_contatto.css" />
+
+    <!-- ICONO DE PESTAÑA CON LOGOTIPO(1) -->
+    <link
+      rel="icon"
+      href="../media/imagenes/icon_white.png"
+      type="image/icon"
+    />
+  </head>
+  <body>
+    <!-- ----- FORMULARIO ------ -->
+    <div class="div__contatto">
+      <h1 class="div__contatto__titulo">Contattami!</h1>
+      <br />
+
+      <!-- ----- Formulario ----- -->
+      <form class="div__formulario" action="../index.html" method="get" enctype="text/plain">
+        <label for="nombre" class="fomulario__label"
+          >Nome:
+          <input type="text" id="inputName" name="nombre" id="nombre"/> </label
+        ><br />
+        <label for="email" class="fomulario__label"
+          >E-mail:
+          <input type="text" id="inputEmail" name="email" id="email" /> </label
+        ><br />
+        <label for="num" class="fomulario__label"
+          >Contatto telefonico:
+          <input type="tel" id="inputNum" name="num" id="num"/> </label
+        ><br />
+        <label for="textarea" class="fomulario__label"
+          >Come posso aiutarti? </label
+        ><br />
+        <textarea
+          id="inputTextarea"
+          name="textarea"
+          placeholder="Scrivi qui il tuo messaggio..."
+          rows="5"
+          cols="50"
+          class="formulario__textarea"
+        ></textarea>
+        <br />
+        <button type="reset" class="formulario__button" id="resetButton">
+          Invia
+        </button>
+        <!------ Button type_Reset: para que la información de este formulario sea nula y no tenga valor ------ -->
+      </form>
+    </div>
+  </body>
+</html>

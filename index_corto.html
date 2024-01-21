@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cortometraggi</title>
+    <link rel="stylesheet" href="../styles/styles_corto.css" />
+
+    <!-- ICONO DE PESTAÑA CON LOGOTIPO(1) -->
+    <link
+      rel="icon"
+      href="../media/imagenes/icon_white.png"
+      type="image/icon"
+    />
+  </head>
+  <body>
+    <header class="corto__header">
+      <!-- NAV CON BOTONES CON FUNCIÓN DE: ABRIR TABS -->
+      <div class="header__nav" id="nav">
+        <!-- MEMORIA: JUSTIFICAR EL USO DE LA ETIQUETA DIV EN VEZ DE LA ETIQUETA NAV -->
+        <button type="button" class="button__nav">Anche il mare finisce</button>
+        <button type="button" class="button__nav">Lurido insetto</button>
+        <button type="button" class="button__nav">Occhi-O!</button>
+        <button type="button" class="button__nav">Sindrome di Stendhal</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- TABS VERTICALES (4) -->
+
+      <!-- Doy al div una id que sea igual al contenido string de la etiqueta h2 -->
+      <div class="panel" id="Anche il mare finisce">
+        <h2 class="panel__titulo">Anche il mare finisce</h2>
+        <p class="panel__texto">
+          Primo premio per miglior attrice protagonista al Bamp 2023
+        </p>
+
+        <!--Creo un botón para que, en las pantallas con menos de 925px de anchura, aparezca este en vez del icono del video-->
+        <button type="button" class="panel__button panel__button--esconder">
+          <a
+            href="../media/videos/Anche il mare finisce.mp4"
+            class="panel__button__link panel__button__link--esconder"
+            target="_blank"
+            >Guarda il video qui</a
+          >
+        </button>
+
+        <video width="550" height="550" controls class="video">
+          <source
+            src="../media/videos/Anche il mare finisce.mp4"
+            type="video/mp4"
+            class="panel__video"
+          />
+        </video>
+      </div>
+
+      <div class="panel" id="Lurido insetto">
+        <h2 class="panel__titulo">Lurido insetto</h2>
+        <p class="panel__texto">
+          Un'ironica interpretazione della societá attuale e della
+          predisposizione umana al sacrificarsi.
+        </p>
+
+        <button type="button" class="panel__button panel__button--esconder">
+          <a
+            href="../media/videos/Lurido Insetto IISSROSALUXEMBURG.mp4"
+            class="panel__button__link panel__button__link--esconder"
+            target="_blank"
+            >Guarda il video qui</a
+          >
+        </button>
+
+        <video width="550" height="315" controls class="video">
+          <source
+            src="../media/videos/Lurido Insetto IISSROSALUXEMBURG.mp4"
+            type="video/mp4"
+            class="panel__video"
+          />
+        </video>
+      </div>
+
+      <div class="panel" id="Occhi-O!">
+        <h2 class="panel__titulo">Occhi-O!</h2>
+        <p class="panel__texto">
+          "...s. m. [der. di bullo ]. Comportamento da bullo; spavalderia
+          arrogante e sfrontata. In partic., atteggiamento di sopraffazione sui
+          più deboli, con riferimento a violenze fisiche e psicologiche attuate
+          spec. in ambienti scolastici o giovanili. "
+        </p>
+
+        <button type="button" class="panel__button panel__button--esconder">
+          <a
+            href="../media/videos/Occhi-o!.mp4"
+            class="panel__button__link panel__button__link--esconder"
+            target="_blank"
+            >Guarda il video qui</a
+          >
+        </button>
+
+        <video width="550" height="315" controls class="video">
+          <source
+            src="../media/videos/Occhi-o!.mp4"
+            type="video/mp4"
+            class="panel__video"
+          />
+        </video>
+      </div>
+
+      <div class="panel" id="Sindrome di Stendhal">
+        <h2 class="panel__titulo">Sindrome di Stendhal</h2>
+        <p class="panel__texto">
+          "...Generalmente, gli effetti della sindrome sono transitori e di
+          lieve entità, anche se - non sapendo esattamente cosa sta succedendo -
+          l'individuo potrebbe allarmarsi..."
+        </p>
+
+        <button type="button" class="panel__button panel__button--esconder">
+          <a
+            href="../media/videos/Unheimlich.mp4"
+            class="panel__button__link panel__button__link--esconder"
+            target="_blank"
+            >Guarda il video qui</a
+          >
+        </button>
+
+        <video width="550" height="315" controls class="video">
+          <source
+            src="../media/videos/Unheimlich.mp4"
+            type="video/mp4"
+            class="panel__video"
+          />
+        </video>
+      </div>
+
+      <!--AÑADIR DESCRICPIÓN -->
+    </main>
+  </body>
+
+  <script src="../script/index_corto.js"></script>
+</html>
