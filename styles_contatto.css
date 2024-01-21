@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("../media/imagenes/arte/arte\ \(4\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*----- REGLA @FONT FACE  ----- */
+
+@font-face {
+  font-family: CenturyGothic;
+  src: url("../media/fuentes/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: Against;
+  src: url("../media/fuentes/against\ regular.ttf");
+}
+
+/* ------  Formulario de contacto ----- */
+
+.div__contatto {
+  width: 50%;
+  margin: 2rem;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  padding: 3rem;
+  position: absolute;
+  top: 15%;
+  right: 25%;
+}
+
+/* ----- Div contenedor del formulario con etiqueta <form> ----- */
+
+.div__formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  font-family: CenturyGothic;
+}
+
+.div__contatto__titulo {
+  font-family: Against;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/*----- Botón formulario ------ */
+.formulario__button {
+  outline: none;
+  border: 1px solid black;
+  background-color: transparent;
+  max-width: 5rem;
+  font-size: 0.9rem;
+  font-family: CenturyGothic;
+  cursor: pointer;
+}
+
+.formulario__button:hover {
+  background-color: greenyellow;
+}

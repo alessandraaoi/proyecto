@@ -1,0 +1,387 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*----- REGLA @FONT FACE  ----- */
+
+@font-face {
+  font-family: CenturyGothic;
+  src: url("../media/fuentes/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: Against;
+  src: url("../media/fuentes/against\ regular.ttf");
+}
+
+/*----- STYLE HEADER  ----- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-image: url("../media/imagenes/25092023-DSCF0709.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100%;
+  height: 100vh;
+  transition: all 2s linear;
+}
+
+/*----- NAV ------*/
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+.link__list__item {
+  text-decoration: none;
+  color: white;
+}
+
+.link__list__item:hover {
+  color: greenyellow;
+}
+
+.list__item {
+  font-family: CenturyGothic;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+.header__nav__logo {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+/*----- BOTONES &times; Y &equiv; PARA: MENU 'HAMBURGUESA' ------ */
+
+.button--esconder {
+  color: white;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 3rem;
+  cursor: pointer;
+  margin: 3rem 0;
+  display: none;
+}
+
+.button__x--esconder {
+  color: white;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.list__item--esconder {
+  display: none;
+}
+
+/*----- AQUÍ EMPIEZA: RESPONSIVE HEADER -----*/
+
+@media screen and (max-width: 925px) {
+  .nav__list {
+    display: none;
+  }
+
+  .button--esconder {
+    display: inline-block;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .list__item--esconder {
+    display: block;
+  }
+}
+
+main {
+  width: 100%;
+  background-image: url("../media/imagenes/plantilla_pag2_Mesa\ de\ trabajo\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+}
+
+/*----- STYLE SECTION: INTRODUCTION  ----- */
+
+.section__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 5rem;
+}
+
+.section__div__texto {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  font-family: CenturyGothic;
+  width: 50%;
+}
+
+.section__div__button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: Against;
+  color: black;
+  /* ----- PROPRIEDADES DE TRANSITION PARA :HOVER ----- */
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.section__div__button:hover {
+  background-color: greenyellow;
+  color: black;
+  transform: scale(1.2, 1.2) translate(0.1rem, 0.4rem);
+}
+
+/*----- AQUÍ EMPIEZA: RESPONSIVE MAIN, SECTION: INTRODUCTION -----*/
+
+@media screen and (max-width: 925px) {
+  .section__div {
+    max-height: 80vh;
+    padding: 2rem;
+  }
+
+  .section__div__texto {
+    font-size: 0.9rem;
+    width: 70%;
+  }
+
+  .section__div__button {
+    padding: 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .section__div__button:hover {
+    transform: scale(1.1, 1.1) translate(0.1rem, 0.3rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section__div__texto {
+    font-size: 0.7rem;
+  }
+}
+/*----- STYLE SECTION: PORTFOLIO  ----- */
+
+.section__portfolio__cards {
+  width: 100%;
+  height: auto;
+  background-image: url("../media/imagenes/plantilla_pag3_Mesa\ de\ trabajo\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+}
+
+.portfolio__cards__titulo {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: Against;
+  text-align: center;
+}
+
+/*----- CARDS ----- */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 3rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* ----- CARD ----- */
+
+.cards__card {
+  width: 25rem;
+  height: 18rem;
+  padding: 1.5rem;
+  margin: 0 0 1rem 0;
+  border-radius: 3%;
+  box-shadow: 4px 4px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-property: transform;
+  transition-duration: 1.1s;
+  transition-timing-function: ease-in-out;
+  color: white;
+  text-align: center;
+  font-family: CenturyGothic;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.01);
+  cursor: pointer;
+}
+
+.card__img {
+  position: relative;
+  border-radius: 2%;
+  width: 15rem;
+  height: 10rem;
+}
+
+.card__link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.card__link:hover {
+  color: greenyellow;
+}
+
+.cards__card:hover {
+  transform: scale(1.2, 1.2) translate(0.1rem, 0.5rem);
+  color: greenyellow;
+}
+
+/*----- AQUÍ EMPIEZA: RESPONSIVE MAIN, SECTION: PORTFOLIO , CARDS -----*/
+
+@media screen and (max-width: 925px) {
+  .portfolio__cards__titulo {
+    font-size: 0.9rem;
+  }
+
+  .cards__card {
+    width: 18rem;
+    height: 13rem;
+  } /* La anchura y la altura de cada card se reducen */
+
+  .cards__card:hover {
+    color: greenyellow;
+  }
+
+  .cards__card:hover {
+    transform: scale(1.05, 1.05) translate(0.1rem, 0.5rem);
+    color: greenyellow;
+  }
+}
+
+/* ------ AQUÍ EMPIEZA: FOOTER ------ */
+
+.footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*----- BOTÓN PARA CONTACTO ------ */
+
+.panel__contatto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+  background-color: white;
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+.a__contatto {
+  text-decoration: none;
+}
+
+.button__contatto {
+  cursor: pointer;
+  outline: none;
+  border: 2px solid black;
+  background-color: transparent;
+  border-radius: 10%;
+  padding: 1rem;
+  font-family: CenturyGothic;
+  box-shadow: 2px 2px 3px black;
+  /* ----- PROPRIEDADES DE TRANSITION PARA :HOVER ----- */
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.button__contatto:hover {
+  background-color: greenyellow;
+  color: black;
+  border: 2px solid white;
+  transform: scale(1.1, 1.1) translate(0.1rem, 0.3rem);
+}
+
+.a__contatto {
+  color: black;
+  text-decoration: none;
+}
+
+.a__contatto:hover {
+  color: white;
+}
+
+/*---- FOOTER: DIV CON ICONOS DE REDES SOCIALES -------*/
+
+.panel__redes {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.redes__img {
+  max-width: 5rem;
+  height: 3rem;
+}
+
+/*----- FOOTER: DIV CON TEXTO ----- */
+
+.panel__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: CenturyGothic;
+  font-size: 1rem;
+}

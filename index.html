@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+  <!-- Igualmente esta página web contiene términos en inglés -->
+
+  <!-- EMPIEZA EL HEAD -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cristina Oi | Photography</title>
+    <!--Enlace a hoja de estilo CSS-->
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- ICONO DE PESTAÑA CON LOGOTIPO(1) -->
+    <link rel="icon" href="./media/imagenes/icon_white.png" type="image/icon" />
+  </head>
+
+  <body>
+    <!-- EMPIEZA EL HEADER -->
+    <header class="header">
+      <!-- EMPIEZA EL NAV -->
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <!-- BOTÓN 'X' PARA: NAV RESPONSIVE, CONTROL DE VISUALIZACIÓN DEL MENU -->
+          <li class="list__item list__item--esconder">
+            <button
+              type="button"
+              class="button__x button__x--esconder"
+              id="buttonCerrar"
+            >
+              &times;
+            </button>
+          </li>
+          <li class="list__item">
+            <a
+              href="#section__introduction"
+              title="link__list"
+              class="link__list__item"
+              ><span class="list__item__text">Chi sono</span></a
+            >
+          </li>
+          <li class="list__item">
+            <a href="#portfolio" title="link__list" class="link__list__item"
+              ><span class="list__item__text">Portfolio</span></a
+            >
+          </li>
+          <li class="list__item">
+            <a
+              href="./links/index_premi.html"
+              title="link__list"
+              class="link__list__item"
+              target="_blank"
+              ><span class="list__item__text">Riconoscimenti</span></a
+            >
+          </li>
+          <li class="list__item">
+            <a
+              href="./links/index_contatto.html"
+              title="link__list"
+              class="link__list__item"
+              target="_blank"
+            >
+              <span class="list__item__text">Contatto</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- BOTÓN PARA: NAV RESPONSIVE, CONTROL DE VISUALIZACIÓN DEL MENU (menu hamburguesa) -->
+        <button type="button" class="button button--esconder" id="buttonAbrir">
+          &equiv;
+        </button>
+      </nav>
+
+      <!-- Logotipo -->
+      <img
+        src="./media/imagenes/logo_white.png"
+        alt="logo"
+        class="header__nav__logo"
+      />
+    </header>
+
+    <!-- EMPIEZA EL MAIN -->
+    <main>
+      <!-- EMPIEZA EL SECTION: INTRODUCTION -->
+      <section class="section" id="section__introduction">
+        <div class="section__div">
+          <p class="section__div__texto" id="introduction">
+            Sono Cristina, diplomata in cinema e fotografia, appassionata di
+            scrittura e giornalismo. Ogni mio scatto è unico e personale. In
+            tutte le mie elaborazioni artistiche ricerco costantemente catturare
+            emozioni, dettagli, momenti, immortalare piccole grandi cose che
+            fanno la differenza nel mondo che circonda. Nata e vissuta a Bari,
+            Puglia. Conto con 2 anni di esperienza nel mondo della fotografia,
+            al quale mi sono avvicinata lavorativamente scattando foto ad eventi
+            e compleanni. Ho partecipato a vari concorsi cinematografici
+            nazionali, che mi hanno aperto le porte alla scrittura e direzione
+            dei miei primi cortometraggi piú professionali. Attualmente lavoro
+            come redattrice per una testata giornalistica di cinema
+            (Taxidrivers), grazie alla quale riesco a conciliare insieme le mie
+            passioni e continuare i miei studi in ambito cinematografico.
+          </p>
+
+          <div class="introduction__cards">
+            <!-- AÑADIR: FOTO CRI EN SLIDESHOW -->
+            <div class="introduction__card"></div>
+          </div>
+          <a
+            href="./links/index_premi.html"
+            class="section__div__button"
+            target="_blank"
+            >Premi e riconoscimenti</a
+          >
+        </div>
+      </section>
+
+      <!-- EMPIEZA EL SECTION: PORTFOLIO  -->
+      <section class="section__portfolio__cards" id="portfolio">
+        <br /><br />
+        <h2 class="portfolio__cards__titulo">Scopri il mio portfolio</h2>
+
+        <div class="cards">
+          <!-- Creo un div que sirva de contenedor para tres diferentes cards -->
+
+          <!-- Cada una de las cards está contenida en un div  -->
+          <div class="cards__card">
+            <img
+              src="media/imagenes/portada_portfolio.jpg"
+              alt="fotografia"
+              class="card__img"
+            />
+            <h3 class="card__front__titulo">
+              <a
+                href="./links/index_fotografia.html"
+                class="card__link"
+                target="_blank"
+                >Fotografia</a
+              >
+            </h3>
+          </div>
+          <!-- La card 'Fotografia' y la card 'Cinema' contienen ua etiqueta h3, que a su vez contiene un enlace con target='_blank' para que el usuario 
+            sea dirigido a otra pestaña web al hacer click en el titulo -->
+
+          <div class="cards__card">
+            <video width="280" height="200" controls>
+              <source
+                src="media/videos/DSCF9840_4.mp4"
+                type="video/mp4"
+                class="card__video"
+              />
+            </video>
+            <h3 class="card__front__titulo">
+              <a
+                href="./links/index_corto.html"
+                class="card__link"
+                target="_blank"
+                >Cinema</a
+              >
+            </h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ----- EMPIEZA EL FOOTER ----- -->
+
+    <footer class="footer">
+
+      <!--Botón con enlace al formulario de contacto-->
+      <div class="panel__contatto">
+        <button type="button" class="button__contatto" id="bContatto">
+          <a
+            href="./links/index_contatto.html"
+            class="a__contatto"
+            target="_blank"
+            >Contattami!</a
+          >
+        </button>
+        <!-- Hago click en el botón y se abre otra pagina html con target_self con formulario de contacto -->
+      </div>
+
+      <!-- Iconos de redes sociales y sus enlaces correspondientes -->
+
+      <div class="panel__redes">
+        <a href="https://www.instagram.com/cristophilm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"
+          ><img src="./media/imagenes/iconos/instagram.png" class="redes__img" alt="icono"
+        /></a>
+        <a href="https://www.fiverr.com/crostinaa?source=gig_page" target="_blank"
+          ><img src="./media/imagenes/iconos/fiverr.png" class="redes__img" alt="icono"
+        /></a>
+        <a href="https://www.facebook.com/cristina.oi.5?locale=es_ES" target="_blank"
+          ><img src="./media/imagenes/iconos/facebook.png" class="redes__img" alt="icono"
+        /></a>
+        </div>
+
+      <!-- Footer: pólitica de privacidad y copyright -->
+      <div class="panel__footer">
+        <p class="panel__footer__p">Politica della privacy</p>
+        <p class="panel__footer__p">&copy; 2024 Maria Cristina Oi</p>
+      </div>
+    </footer>
+  </body>
+
+  <!--Enlace al archivo JS-->
+  <script src="script/index.js"></script>
+</html>

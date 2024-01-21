@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*----- REGLA @FONT FACE  ----- */
+
+@font-face {
+  font-family: CenturyGothic;
+  src: url("../media/fuentes/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: Against;
+  src: url("../media/fuentes/against\ regular.ttf");
+}
+
+/* ----- NAV ----- */
+.header__nav {
+  height: 100%;
+  width: 21rem; /* ----- Anchura del nav lateral ----- */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+/*----- PANEL PARA: RESPONSIVE NAV (TABS VERTICALES)*/
+
+.panel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  display: none;
+  font-family: CenturyGothic;
+  max-width: 90%;
+}
+
+.activo {
+  display: flex;
+  flex-direction: column;
+  color: greenyellow;
+  font-size: 0.8rem;
+  font-family: CenturyGothic;
+}
+
+.activo:hover {
+  color: white;
+}
+
+.button__nav {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.7rem;
+  font-family: CenturyGothic;
+  text-align: right;
+}
+
+.button__nav:hover {
+  color: greenyellow;
+}
+
+/* ----- MAIN -----*/
+main {
+  margin-left: 21rem; /* Margen izquierdo = anchura del nav lateral */
+  max-width: 100%;
+  height: 100vh;
+}
+
+/* ------ RESPONSIVE: MENU, PANEL. Cuando la anchura de pantalla es menor que 768px: ------*/
+@media screen and (max-width: 768px) {
+  .button__nav {
+    font-size: 0.8rem;
+  }
+
+  .header__nav {
+    width: 12rem;
+  } /*----- La anchura del nav se reduce a 12rem, y proporcionalmente reduzco también el margen izquierdo del main -----*/
+
+  main {
+    margin-left: 12rem;
+  }
+
+  .panel__titulo {
+    font-size: 1.1rem;
+  }
+
+  .panel__texto {
+    font-size: 0.8rem;
+  }
+}
+
+/* ----- HILA DEL GRID DE IMAGENES EN EL PANEL: RITRATTI -----*/
+
+.panel__grid__ritratti {
+  margin: 3rem 0;
+}
+
+.grid__ritratti__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ----- DIV  COLUMNAS -----*/
+.grid__ritratti__row__column {
+  justify-content: center;
+  max-width: 25%;
+  flex-wrap: wrap;
+  margin-right: 0.5rem;
+  height: 100%;
+}
+
+.column__ritratti__img {
+  margin: 0.5rem 1rem 0.5rem 0;
+  vertical-align: middle;
+  width: 100%;
+  height: 60%;
+}
+
+.link__img {
+  margin-bottom: 1rem;
+}
+
+/*------ RESPONSIVE: GRID DE IMAGENES ------ */
+
+@media screen and (max-width: 768px) {
+  .grid__ritratti__row__column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .grid__ritratti__row__column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*----- Hover con ratón sobre cada imagen -----*/
+
+.column__ritratti__img:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  border-radius: 5%;
+}
+
+.div__link__img {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.link__img {
+  text-align: center;
+  text-decoration: none;
+  font-family: CenturyGothic;
+  color: black;
+  font-weight: 100;
+}
+
+.link__img:hover {
+  color: greenyellow;
+  font-weight: bolder;
+}
+
+/*----- Responsive: links ----- */
+@media screen and (max-width: 925px) {
+  .link__img {
+    font-size: 0.6rem;
+    padding: 0;
+  }
+}
+
+/* ---- Botón con link en ''Portfolio - Fotografia d'arte'' ------*/
+
+.grid__arte__button {
+  outline: none;
+  border: 1px solid greenyellow;
+  border-radius: 15%;
+  background-color: transparent;
+  padding: 0.5rem;
+  font-family: CenturyGothic;
+  font-size: 1rem;
+}
+
+.grid__arte__link {
+  color: black;
+  text-decoration: none;
+}
+
+.grid__arte__button:hover {
+  background-color: black;
+}
+
+.grid__arte__link:hover {
+  color: greenyellow;
+}
+
+/*------ Responsive: button ------- */
+@media screen and (max-width: 768px) {
+  .grid__arte__button {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+}

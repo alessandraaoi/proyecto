@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*----- REGLA @FONT FACE  ----- */
+
+@font-face {
+  font-family: CenturyGothic;
+  src: url("../media/fuentes/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: Against;
+  src: url("../media/fuentes/against\ regular.ttf");
+}
+
+.header__nav {
+  height: 100%;
+  width: 21rem; /* ----- Anchura del nav lateral ----- */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+/*----- PANEL (TABS VERTICALES)*/
+
+.panel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  display: none;
+  font-family: CenturyGothic;
+  max-width: 90%;
+}
+
+/*---- Botón: ahora le daré un display: none, para después darle un display: block para pantallas con anchura mayor a los 925px.*/
+.panel__button--esconder {
+  outline: none;
+  background-color: greenyellow;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 7px;
+  padding: 0.5rem;
+  margin: 5rem 0;
+  display: none;
+}
+
+.panel__button__link--esconder {
+  text-decoration: none;
+  color: black;
+  font-family: CenturyGothic;
+  font-size: 1rem;
+  display: none;
+}
+
+.activo {
+  display: flex;
+  flex-direction: column;
+  color: greenyellow;
+  font-size: 0.8rem;
+  font-family: CenturyGothic;
+}
+
+.activo:hover {
+  color: white;
+}
+
+.button__nav {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.7rem;
+  font-family: CenturyGothic;
+  text-align: right;
+}
+
+.button__nav:hover {
+  color: greenyellow;
+}
+
+/* ----- MAIN--PANELES -----*/
+main {
+  margin-left: 21rem; /* ----- Margen izquierdo = anchura del nav lateral ----- */
+  max-width: 100%;
+  height: 100vh;
+}
+
+/* ----- VIDEOS ------*/
+
+.video {
+  margin: 2rem 0;
+}
+
+.panel__video {
+  max-width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ------ RESPONSIVE ------*/
+
+@media screen and (max-width: 925px) {
+  .panel__titulo {
+    font-size: 1.1rem;
+  }
+
+  .panel__texto {
+    font-size: 0.9rem;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .panel__button--esconder,
+  .panel__button__link--esconder {
+    display: block;
+  }
+
+  .panel__button--esconder:hover {
+    background-color: white;
+    border: 2px solid greenyellow;
+  }
+
+  .panel__button__link--esconder:hover {
+    font-weight: bolder;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button__nav {
+    font-size: 0.8rem;
+  }
+
+  .header__nav {
+    width: 12rem;
+  } /*----- La anchura del nav se reduce a 12rem, y proporcionalmente reduzco también el margen izquierdo del main -----*/
+
+  main {
+    margin-left: 12rem;
+  }
+
+  .panel__texto {
+    font-size: 0.8rem;
+  }
+
+  .panel__button__link--esconder {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../media/imagenes/arte/arte\ \(9\).jpg");
+  background-repeat: repeat; /*RESPONSIVE: uso 'repeat' para que se pueda ver la imagen completa en varios tamaños de pantalla*/
+  background-size: cover;
+}
+
+/*----- REGLA @FONT FACE  ----- */
+
+@font-face {
+  font-family: CenturyGothic;
+  src: url("../media/fuentes/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: Against;
+  src: url("../media/fuentes/against\ regular.ttf");
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__link {
+  outline: none;
+  border: none;
+  position: relative;
+  left: -60px; /* Para que los enlaces no aparezcan en la pantalla */
+  width: 10rem;
+  padding: 1rem;
+  color: black;
+  background-color: black;
+  border-radius: 5%;
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: CenturyGothic;
+  transition: 0.3s;
+  box-shadow: 1px 1px 5px 0.5px rgba(255, 255, 255, 0.5);
+}
+
+.nav__link:hover {
+  left: 0;
+  color: greenyellow;
+}
+
+/* ------- Panel ------- */
+.panel {
+  max-width: 75%;
+  height: 85vh;
+  padding: 1.5rem;
+  margin: 3rem 3rem 0 15rem;
+  font-family: CenturyGothic;
+  background-color: white;
+  box-shadow: 1px 1px 5px 0.5px black;
+  display: none;
+}
+
+.panel__titulo {
+  font-family: Against;
+}
+
+/* ----- Imagen en el panel -----*/
+
+.panel__img {
+  max-width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ----- Botón con enlace a url externo al proyecto ----- */
+.panel__link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-family: Against;
+  color: black;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 12rem;
+  /*PROPRIEDADES DE TRANSITION PARA : HOVER */
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+.panel__link:hover {
+  background-color: greenyellow;
+  color: black;
+  transform: scale(1.1, 1.1) translate(0.1rem, 0.3rem);
+}
+
+/* ----- MEDIA QUERY--RESPONSIVE (para móviles). Visualización de la página cuando la anchura de pantalla es menor que 515px: -----*/
+@media screen and (max-width: 515px) {
+  .panel {
+    padding: 0.8rem;
+    margin: 3rem 2rem 0 10rem;
+    font-family: CenturyGothic;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0.5px black;
+    font-size: 0.8rem;
+    display: none;
+  }
+
+  .panel__texto {
+    font-size: 0.7rem;
+  }
+
+  .panel__titulo {
+    font-size: 0.9rem;
+  }
+
+  .panel__subtitulo {
+    font-size: 0.8rem;
+  }
+
+  .nav__link {
+    width: 8rem;
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    left: -70px;
+  }
+}
